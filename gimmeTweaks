@@ -1,0 +1,6 @@
+#!/bin/bash
+if [[ `whoami` == "root" ]]; then
+	/etc/rc.d/substrate && killall SpringBoard
+else
+	echo "This needs to be run from the root user. Type 'su', enter password (default: alpine), and try again."
+fi
